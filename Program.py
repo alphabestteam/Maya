@@ -28,6 +28,12 @@ def main():
     print(calculate_factorial(6))
     print(calculate_factorial(7))
     print(calculate_factorial(8))
+    print(prime_nums(5))
+    print(prime_nums(6))
+    print(prime_nums(7))
+    print(prime_nums(14))
+    print(prime_nums(152))
+    print(prime_nums(60693))
 
 if __name__ == "__main__":
     main()
