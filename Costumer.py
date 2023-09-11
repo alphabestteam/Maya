@@ -1,5 +1,5 @@
 class Costumer:
-    def __init__(self, costumer_name: str, groceries_list: list, total_price: float) -> None:
+    def __init__(self, costumer_name: str) -> None:
         self._costumer_name = costumer_name
         self._groceries_list = []
         self._total_price = 0
