@@ -30,12 +30,11 @@ class Costumer:
             self.groceries_list.append({"product": product_obj, "units": int(product_units)})
             return None
         for dict in self.groceries_list:
-            if product_obj.product_name == dict["product"].product_name:#SEE IF WORKS
+            if product_obj.product_name == dict["product"].product_name:
                 dict["units"] += int(product_units)
                 return None
         new_dict = {"product": product_obj, "units": int(product_units)}
         self.groceries_list.append(new_dict)
-        print(self.groceries_list)
         
 
     def remove_product(self, product_name: str, delete_units: int) -> bool:
@@ -46,11 +45,9 @@ class Costumer:
             if product_name == dict["product"].product_name:
                 if dict["units"] > delete_units:
                     dict["units"] -= delete_units
-                    print(self.groceries_list)
                     return True
                 elif dict["units"] == delete_units:
                     self.groceries_list.remove(dict)
-                    print(self.groceries_list)
                     return True
                 else:
                     return False
