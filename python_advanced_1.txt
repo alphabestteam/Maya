@@ -1,0 +1,8 @@
+Python Advanced 1:
+
+1. Magic/special functions  are functions that end and start with two underscores for example: __init__, __str__, __sizeof__, __dir__.
+The thing that makes these functions be so unique is the fact that we don’t call them by there specific name, but through some other actions.  So for example, we use the __str__ special function when we want to return the object’s attributes and their values but when we call the function we just write the object name inside the print() function, not __str__.
+2. If the __str__ is not being override, then the place in memory of the object will be printed instead of the object itself.
+3. If the __eq__ function is not being override, if we will compare to objects, the result will be based on their position in memory (if it’s pointing on the same position the True, if not False)
+4. Operator overloading is when an operator is used for more than one thing. For example the operator + adds two integers together but also connects two words in string. So operator overloading can happen in python because it can act separately according to the context of the operator use. So python knows how to use an operator with different contexts. 
+5. d. The output for comparing the objects is false like I wrote before (because the objects are not pointing to the same place in memory.  The outputs for the printing the objects are their positions in memory. But the output for adding them together is a type error because you cannot add to objects together. You can fix all of this with magic functions. To fix the addition problem we will use __add__, to fix the comparing problem we will use __eq__, and to fix the print problem we wil use __str__.
