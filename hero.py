@@ -71,7 +71,7 @@ class Hero:
         if monster_hp == 0:
             self.increase_coins(self.level)
 
-    def defend(self, monster_damage: int):
+    def defend(self, monster_damage: int) -> float:
         """
         a function that reduces the damage of the monster by 80 percent
         """

@@ -45,13 +45,13 @@ class Monster:
         else:
             return random.choice([current_hero_level - 1, current_hero_level, current_hero_level + 1])
         
-    def attack(self, hero_obj: object, defend_activated: bool):
+    def attack(self, hero_obj: object, defend_activated: bool) -> None:
         """
         a function that reduces the hero's lives based on the damage 
         """
         hero_obj.reduce_health(self, defend_activated)
 
-    def reduce_health(self, hero_obj: object):
+    def reduce_health(self, hero_obj: object) -> int:
         """
         a function that reduces the monster's lives based on the damage
         """
