@@ -1,0 +1,1 @@
+Decorators:1. As it sounds, decorators decorate the function. It is a sentence that you put above the function such as @property decorator that you put above a getter function in a class. 
