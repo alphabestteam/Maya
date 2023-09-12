@@ -1,0 +1,8 @@
+1. A perfect example for a function the does not require a specific number of parameters is the function print(). It’s a built-in function that gets as many items as we want and prints them. The reason for it is because we want functions like that to be as generic as possible, so we can use them for many different values and types of objects. If not we would have needed to create many print functions for different amount of parameters or different types, and we don’t want that.
+2. *args is a way of getting as an input to a function as many parameters as we wish. We write a function that the input is *args and all the parameters we will give the function will be put in a tuple. 
+3. When a function uses **kwargs, it means that the function can get as many parameters as we wish, but it will be put in a dictionary. So if we print kwargs it will print a dictionary of the parameters.
+4. The difference between *args and **kwargs is that args gets parameters as tuple, and kwargs gets parameters as dictionary.  In one function you can use both *args and **kwargs
+5. Packing: packing is the process of putting a few different values into one data structure like list or tuple. 
+Unpacking is the exact opposite: it is the process of separating one data structure into a few values. 
+6. Packing: tuple = (value_1, value_2, value_3). Unpacking: value_1, value_2, value_3 = tuple
+
