@@ -1,1 +1,17 @@
-Decorators:1. As it sounds, decorators decorate the function. It is a sentence that you put above the function such as @property decorator that you put above a getter function in a class. 
+Decorators:
+1. a. As it sounds, decorators decorate the function. It is a function that you put above a function, and the outer function that adds some functionality to the inner function is called a decorator. There are more types of decorators such as @property decorator that you put above a getter function in a class, or other built-in decorators. We need decorators in order for the code to be more efficient (because it can be a less complicated with decorators), and the code is not repetitive. also we can add the decorator without changing anything in the function, the decorator fits itself to the function
+b. When you write a decorator for a function, in python the decorator function basically adds up to the function it decorates. So for example if you write a decoration like that:
+@decoration
+def func():
+	print(“hello world”)
+it’s the same as writing that for python:
+func = decorator(func)
+c. pointer function is a variable for the memory address of a function. in python because it’s high level and does not have access to the memory, it doesn’t have an actual memory address for a function. however python is a very flexible language and has other solution to work with functions as objects. You can return a function from a function or put a function as a variable and more which means that you don’t need pointer function.
+d. we need to use *args and **kwargs when creating a decorator because the whole point of a decorator is that it’s a function that can be fit in into an inner function. so it needs to work always for all input the inner function needs, and *args and **kwargs are the most general ways of getting inputs.
+e. an example is @propery that we use for a getter function in a class. 
+g.
+
+Iterators:
+2. a. an iterator is an object that has a specific number of values inside of it (like list, tuples, and dictionaries).
+b. List, tuple, and dictionary
+c. 
