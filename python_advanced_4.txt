@@ -3,6 +3,7 @@ Theards:
 b. To use threads we will use the module threading.
 c. Request library is a module that handles sending HTTP requests. Using the module we can acknowledge many types of requests(PUT, GET, DELETE, POST) and use them. Mostly we will want to use requests library over socket library, because requests library is a high level library and socket library is a low level library. And because we write in python, we will want to use the high level library which is requests
 d. d. iii. 0.8324697017669678: this is the time it takes for the function to run
+iv. 0.2904038429260254: this is the time it takes for the function to run with threading
 Sockets:
 2. a. socket is a way of making a communication between two computers in a network. It is the entry or exit of where we will be sending data from and to. For example we want to use google the tab opens a socket where we will send data that will get to a socket that is in the servers of google.
 We won’t want to use sockets all the time, if we want to send data over a specific protocol (like http requests), we would probably want to use a  more specific library.
@@ -10,5 +11,9 @@ b. a server-client is a form of communication between a client and a server. Fir
 c. the two attributes that the constructor for socket will get are: address family; which is a family of addresses that the socket needs to communicate with. Type of connection;  for a valid connection we will use SOCK_STREAM (for example tcp), for a less valid connection we will use SOCK_DGRAM(for example, udp)
 
 Virtual Environments:
-3. a. when you work on a project, you use different modules and libraries and such. But when you want to work on a different project, you probably wouldn’t want the same modules as the last project. 
-b. 
+3. a. when you work on a project, you use different modules and libraries and such. But when you want to work on a different project, you probably wouldn’t want the same modules as the last project, and having many modules on the computer, is not a very efficient idea. Virtual environments fix exactly that problem. A virtual environment is a folder in your project that stores all the libraries and modules you need for the project, so each project has its own virtual environment. A virtual environment is very usefull to us when we want to try different versions of modules for different projects so saving each version in the project’s own virtual environment makes the module be completely separated. Another advantage is that you can do it all on my computer with virtual environemts, and you don’t need to switch to another computer just to try your project with different versions of things.
+b. basically each project you work on has a venv folder which is short for virtual environment, and in that folder you save all the versions of modules you need for the project. Because the modules for different projects are kept with different paths then it works.
+c. to create a virtual environment, you first open the folder of you project, you install the virtualenv module (which is the module for creating virtual environment, then you create the virtual environment(which is a folder in your project). That folder has our python version and basic libraries that comes with it.
+d. 
+
+No, I couldn’t run it immediately because I downloaded the modules before I installed venv, so I need to change the modules’ paths to the venv folder in order for the code to run.
