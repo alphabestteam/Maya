@@ -1,9 +1,9 @@
-from datetime import datetime
+from datetime import datetime, timedelta
 class Task:
     def __init__(self, task_description: str, project, working_days: int, task_complication: int, task_completed: bool) -> None:
         self._task_description = task_description
         self._task_starting_date = datetime.now()
-        self._task_due_date = self.task_starting_date + self.working_days #SEE HOW TO ADD THAT
+        self._task_due_date = self.task_starting_date + timedelta(days=self.working_days)
         self._task_project = project
         self._working_days = working_days
         self._task_complication = task_complication
