@@ -1,0 +1,18 @@
+Notes code academy:
+- HTML stands for HyperText Markup Language
+- HTML elements can be nested inside other elements.
+- indentation make html documents easier to understand.
+- The <!DOCTYPE html> declaration should always be the first line of code in your HTML files. In your HTML files, the <!DOCTYPE html> declaration should always be the initial line of code. This informs the browser about the expected HTML version. 
+- The title of a webpage is visible in the tab of a web browser.
+- Using the <table> element allows you to create a table 
+- Tables can be divided into three main sections: a header, a body, and a footer. 
+- To add fields for users to input information we use the <input> 
+- Client-side validations are executed in the browser before transmitting data to a server. 
+- Semantic HTML elements are elements that we understand their meaning by their name
+- It's possible to apply multiple CSS classes to a single HTML element.
+- The !important flag will override any style.
+- The box model have a set of properties used to create spacing around and between HTML elements.
+- In the default box model, the dimensions of a box are influenced by border thickness and padding.
+- . Hexadecimal is a numeral system with sixteen digits: 0 to 9 followed by "A" to "F."
+
+
