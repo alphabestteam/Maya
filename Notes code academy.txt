@@ -1,27 +1,18 @@
 Notes code academy:
 - HTML stands for HyperText Markup Language
 - HTML elements can be nested inside other elements.
-- Whitespace and indentation make html documents easier to read
-- The <!DOCTYPE html> declaration should always be the first line of code in your HTML files. This lets the browser know what version of HTML to expect.
-- A webpage’s title appears in a browser’s tab.
-- The <table> element creates a table
-- Tables can be split into three main sections: a head, a body, and a footer.
-- The purpose of a <form> is to allow users to input information and send it.
-- To add fields for users to input information we use the <input> element and set the type attribute to a field of our choosing
-- Client-side validations happen in the browser before information is sent to a server.
-- Semantic HTML introduces meaning to a page through specific elements that provide context as to what is in between the tags.
-- The basic anatomy of CSS syntax written for both inline styles and stylesheets.
-- CSS inline styles can be written inside the opening HTML tag using the style attribute.
-- An internal stylesheet is written using the <style> element inside the <head> element of an HTML file.
-- An external stylesheet separates CSS code from HTML, by using the .css file extension.
-- CSS can select HTML elements by type, class, ID, and attribute.
-- Multiple CSS classes can be applied to one HTML element.
-- The !important flag will override any style, however it should almost never be used, as it is extremely difficult to override.
-- The box model comprises a set of properties used to create space around and between HTML elements.
-- In the default box model, box dimensions are affected by border thickness and padding.
-- The position property allows you to specify the position of an element.
-- The display property allows you to control how an element flows vertically and horizontally in a document.
-- Hexadecimal is a number system that has sixteen digits, 0 to 9 followed by “A” to “F”.
-- RGB colors use the rgb() syntax with one value for red, one value for blue and one value for green.
-- HSL stands for hue (the color itself), saturation (the intensity of the color), and lightness (how light or dark a color is).
-- Typography is the art of arranging text on a page.
+- indentation make html documents easier to understand.
+- The <!DOCTYPE html> declaration should always be the first line of code in your HTML files. In your HTML files, the <!DOCTYPE html> declaration should always be the initial line of code. This informs the browser about the expected HTML version. 
+- The title of a webpage is visible in the tab of a web browser.
+- Using the <table> element allows you to create a table 
+- Tables can be divided into three main sections: a header, a body, and a footer. 
+- To add fields for users to input information we use the <input> 
+- Client-side validations are executed in the browser before transmitting data to a server. 
+- Semantic HTML elements are elements that we understand their meaning by their name
+- It's possible to apply multiple CSS classes to a single HTML element.
+- The !important flag will override any style.
+- The box model have a set of properties used to create spacing around and between HTML elements.
+- In the default box model, the dimensions of a box are influenced by border thickness and padding.
+- . Hexadecimal is a numeral system with sixteen digits: 0 to 9 followed by "A" to "F."
+
+
