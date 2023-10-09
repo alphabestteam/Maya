@@ -1,0 +1,33 @@
+{
+    "name":"Bob", 
+    "age":20, 
+    "car":[
+    {
+        "price":30,
+        "release_year" : 2004,
+        "horse_power": 50,
+        "max_speed": 200,
+        "cylinders_num":10
+    },
+    {
+        "price":345,
+        "release_year" : 2018,
+        "horse_power": 100,
+        "max_speed": 400,
+        "cylinders_num":20
+    }
+    ]
+}
+
+{
+    "name": "Shoham",
+    "time_zone": "Israel",
+    "zip_code": 203304,
+    "population": 10000,
+    "year_established":1999,
+    "mayor_of_city":{
+        "age":59,
+        "year_elected": 2023,
+        "yearly_salary": 100000
+    }
+}
