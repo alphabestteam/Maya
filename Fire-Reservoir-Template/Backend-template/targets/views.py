@@ -11,9 +11,19 @@ def add_target(request):
     # Implement here an add function
     if request.method == 'POST':
         request_data = JSONParser().parse(request)
+        target = Target(
+            name=request_data["name"],
+            attack_priority=request_data["attack_priority"],
+            longitude=request_data["longitude"],
+            latitude=request_data["latitude"],
+            enemy_organization=request_data["enemy_organization"],
+            target_goal=request_data["target_goal"],
+            was_target_destroyed=request_data["was_target_destroyed"],
+            target_id=request_data["target_id"]
+        )
         serializer = TargetSerializer(data = request_data)
         if serializer.is_valid():
-            serializer.save()
+            target.save()
             return JsonResponse(serializer.data, status=status.HTTP_201_CREATED)
         return JsonResponse(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
@@ -22,12 +32,19 @@ def update_target(request):
     # Implement here an update function
     if request.method == 'PUT':
         request_data = JSONParser().parse(request)
-        serializer = TargetSerializer(data = request_data)
-        pk = request_data.get('pk', None)
-        target = Target.objects.get(pk=pk)
-        serializer = TargetSerializer(target, data=request.data)
+        print(request_data)
+        pk = request_data.get('target_id', None)
+        target = Target.objects.get(target_id=pk)
+        serializer = TargetSerializer(target, data=request_data)
         if serializer.is_valid():
-            serializer.save()
+            target.name = request_data["name"]
+            target.attack_priority = request_data["attack_priority"]
+            target.longitude = request_data["longitude"]
+            target.latitude = request_data["latitude"]
+            target.enemy_organization = request_data["enemy_organization"]
+            target.target_goal = request_data["target_goal"]
+            target.was_target_destroyed = request_data["was_target_destroyed"]
+            target.save()
             return JsonResponse(serializer.data)
         return JsonResponse(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
