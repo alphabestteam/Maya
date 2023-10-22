@@ -1,0 +1,27 @@
+1.	IntegerField(), this field is for integer values. and it rounds the float up.
+2.	To change the current situation in db, first you need to make a new migration with the IntegerField in the
+models.py, then you need to create a function that rounds up the db values.
+
+def decimal_to_integer(request):
+    parents = Parent.objects.all()
+    for parent in parents:
+        parent.basic_salary = int(parent.basic_salary)
+        parent.save()
+        import django.core.validators
+from django.db import migrations, models
+
+
+class Migration(migrations.Migration):
+
+    dependencies = [
+        ('people', '0008_alter_parent_basic_salary'),
+    ]
+
+    operations = [
+        migrations.AlterField(
+            model_name='parent',
+            name='basic_salary',
+            field=models.IntegerField(default=0, validators=[django.core.validators.MaxValueValidator(999999)]),
+        ),
+        migrations.RunPython(decimal_to_integer),
+    ]
