@@ -7,5 +7,5 @@ class User(models.Model):
     last_name = models.TextField(max_length=100)
     username = models.TextField(max_length=100)
     user_id = models.IntegerField(MinValueValidator(0), primary_key=True)
-    email = models.TextField(max_length=100)
+    email = models.EmailField()
     unread_messages = models.IntegerChoices(MinValueValidator(0))
