@@ -4,7 +4,7 @@ from users.models import User
 from forms.models import Form
 
 # Create your models here.
-class Messages(models.Model):
+class Message(models.Model):
     text = models.TextField(max_length=100)
     sending_date = models.DateField()
     # chat_pointer = models.BooleanField()
