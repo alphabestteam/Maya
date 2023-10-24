@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'forms',
     'message',
     'chats',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [

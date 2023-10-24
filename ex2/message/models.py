@@ -9,3 +9,6 @@ class Message(models.Model):
     chat_pointer = models.ForeignKey(Chat, on_delete=models.CASCADE)
     user_sender = models.ForeignKey(User, on_delete=models.CASCADE)
 
+
+
+
