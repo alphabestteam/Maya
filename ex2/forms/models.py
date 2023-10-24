@@ -13,6 +13,12 @@ class Form(models.Model):
         ('Waiting for Response', 'Waiting for Response'),
         ('Waiting for Handling', 'Waiting for Handling'),
     )
+    event_status = models.CharField(max_length=20, choices=status_options)
     can_draft = models.BooleanField()
     can_download = models.BooleanField()
     shared_users = models.ManyToManyField(User, related_name='shared_events', blank=True)
+
+class SharedForm(models.Model):
+    uploading_date = models.DateField()
+    uploading_user = models.ForeignKey(User, on_delete=models.CASCADE)
+    file = models.FileField()
