@@ -1,5 +1,6 @@
 from rest_framework import serializers
 from .models import Form, SharedForm, MessagesForm
+from message.models import Message
 
 class FormSerializer(serializers.ModelSerializer):
     class Meta:

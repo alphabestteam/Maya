@@ -1,6 +1,5 @@
 from django.db import models
 from django.core.validators import MinValueValidator
-
 # Create your models here.
 class User(models.Model):
     first_name = models.TextField(max_length=100)
@@ -8,4 +7,4 @@ class User(models.Model):
     username = models.TextField(max_length=100)
     user_id = models.IntegerField(MinValueValidator(0), primary_key=True)
     email = models.EmailField()
-    unread_messages = models.IntegerField(MinValueValidator(0))
+    unread_messages = models.ManyToManyField(to='message.Message', blank=True)

@@ -22,8 +22,8 @@ class Form(models.Model):
 class SharedForm(Form):
     uploading_date = models.DateField()
     uploading_user = models.ForeignKey(User, on_delete=models.SET_NULL, null=True)
-    file = models.FileField(upload_to='forms/')
+    file = models.FileField(upload_to='')
 
 class MessagesForm(Form):
     chat_id = models.ForeignKey(Chat, on_delete=models.SET_NULL, null=True)
-    message_history = models.JSONField()
+    receiver_users = models.ForeignKey(User, on_delete=models.CASCADE, null=False)
