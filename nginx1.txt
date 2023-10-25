@@ -1,0 +1,19 @@
+1. nginx is an open source web server, it is used for web content, it works with HTML files, images, JavaScript, and CSS. 
+it can also work as a reverse proxy, that means that it can forward a request to client and to server. it helps with handling traffic
+and more. 
+It is made for dealing with a lot of traffic and connections with minimum use of source servers, so it is high performance and very efficient. 
+it is also very good with dealing with traffic and is high scalable, which means that it can deal with many requests evenly.
+Lastly, Nginx, is very safe, because it is handling with SSL/TLS encryption and decryption. which makes it be very secure.
+2. first you download: brew install nginx
+the you open the nginx.conf file, and put the next code in it:
+http{
+    server{
+        listen 8080;
+        root "/Users/mayameltzer/Desktop/alphaomega training/Maya/index.html";
+    }
+}
+
+events{}
+then you write the command; sudo nginx -s reload
+then the command; sudo brew services start nginx
+and then you start localhost by running: python3 -m http.server 8080 
