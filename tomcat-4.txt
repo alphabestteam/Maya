@@ -1,0 +1,3 @@
+the first way to upload sample.war is with manager app page in tomcat gui. so i downloaded the sample.war to my computer, then on manager
+app in tomcat i clicked on the WAR file to deploy option and choose file, then i chose the file and it was uploaded. 
+the second way is to put sample.war in the directory of webapps, the I refreshed the page and it worked as well.
