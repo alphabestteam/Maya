@@ -1,0 +1,19 @@
+1. web application is an application that is built in a client-server way, where the client is the web browser of the user, and the server is the remote computer that stores the data of the application. 
+The can be used through a web browser in the internet. Web applications are found in a specific path in the web browser and doesn't need to be installed on the device. 
+2. web servers are applications that are handling delivery of contents to the clients. they are responsible for responding to client request.
+they use http to communicate with clients. when a user go to a url in their browser, the browser sends an http request to the web server of the website. 
+Web servers store web pages, images, scripts, and other files.
+3. web servers can host websites and web applications, they handle with images, scripts and more. the make websites be accessible over the internet.
+web servers can also handle sharing files and data, users can download and upload files with a web interface.
+web serves can also deal with APIs, and allow other applications to communicate with them.
+It is very good to hose web applications on web servers, because when you do that you can access it from anywhere with an internet connection.
+having that also means that you can update and maintain easily with the server. you can also easily share resources such as files, dbs and more with users or systems.
+4. Java Servlet is a side server that are build of Java classes and is responsible for handling HTTP requests and making responses.
+5. apache Tomcat is an open source server, that handles with Java. it is made to execute Java Servlets and JavasServer Pages, because it is a container to java servlets.
+Tomcat can run on Windows, Linux, MacOS and more. And it is very secure because it has SSL support. 
+Tomcat can act alone as a server for static content and dealing with http requests.
+6. an advantage is that Tomcat is an open source application, and so everyone can use it for their own projects.
+another advantage is that it is stable, so it runs the application smoothly. And if a part of Tomcat software doesn't work, the rest of the application will still run successfully
+which makes it live all the time. 
+A disadvantage is that it is not as fast as Apache and it is very complex and without GUI for beginners.
+It is also has not a lof of built in features, it provides the essential functionality for having web applications but not a lot more than that.
