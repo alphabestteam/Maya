@@ -6,7 +6,6 @@ from chats.serializers import ChatSerializer
 from rest_framework.response import Response
 from rest_framework import status
 from users.models import User
-from users.serializers import UserSerializer
 
 # Create your views here.
 
@@ -24,7 +23,7 @@ class MessageViewSet(viewsets.ModelViewSet):
                 chat_serializer.save()
         if message_serializer.is_valid():
             message_serializer.save()
-            user_id = request.data.get('user_sender', None)
+            user_id = request.data.get('receiver', None)
             message_read = request.data.get('message_read', False)
             if not message_read:
                 user = User.objects.get(user_id=user_id)

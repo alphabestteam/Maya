@@ -8,6 +8,6 @@ class Message(models.Model):
     chat_pointer = models.ForeignKey(Chat, on_delete=models.CASCADE)
     user_sender = models.ForeignKey(to='users.User', on_delete=models.CASCADE)
     message_read = models.BooleanField(default=False)
-
+    receiver = models.ForeignKey(to='users.User', on_delete=models.CASCADE, related_name="receiver_user")
 
 

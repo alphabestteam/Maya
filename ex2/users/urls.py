@@ -1,9 +1,10 @@
-from django.urls import path
+from django.urls import path, include
+from rest_framework.routers import DefaultRouter
 from . import views
 
+router = DefaultRouter()
+router.register(r'user', views.UserViewSet)
+
 urlpatterns = [
-    path('getAllUsers/', views.ListUsers.as_view(), name='list_users'),
-    path('addUser/', views.ListUsers.as_view(), name='list_users'),
-    path('updateUser/', views.ListUsers.as_view(), name='list_users'),
-    path('deleteUser/<int:user_id>/', views.ListUsers.as_view(), name='user_id'),
-]
+    path('api/', include(router.urls)),
+] 
