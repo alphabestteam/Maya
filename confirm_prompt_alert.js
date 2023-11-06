@@ -11,3 +11,45 @@ confirm:
 a confirm() method also opens a popup box, but with the options of buttons cancel and OK. so the user can choose which button to click and it will act accordingly.
 Mostly we use confirm() for validation or asking the user to accept or decline something.*/
 
+
+function process_start(){
+    document.body.addEventListener("load", alert_bob());
+}
+
+process_start();
+//b.
+
+function alert_bob(){
+    alert("OMG BOBBB!! Patrick got lost! You have to find himmmmmm fastttttt!!!!!!!");
+    is_bob_going()
+}
+
+//c.
+function is_bob_going(){ 
+    let answer = prompt("Dear Bob, are you going to look for you dear friend Patrick? (pleasee write yes)");
+    if (answer =="yes")
+        announce_hooray()
+    else
+        process_start()
+}
+
+//d.
+function announce_hooray(){
+    alert("HOORAYYYY! You are going to find Patrick! How wonderful!");
+    was_patrick_found()
+}
+
+//e.
+function was_patrick_found(){
+    let answer = prompt("Was Patrick found?");
+    if (answer == "yes")
+        patrick_was_found()
+    else
+        process_start()
+
+}
+
+function patrick_was_found(){
+    alert("Bob found Patrickkk!!! Great Great Great");
+}
+
