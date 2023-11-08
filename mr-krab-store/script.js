@@ -9,7 +9,7 @@ List of endpoints:
 */
 url = "http://localhost:8000/menu";
 async function getData(url) {
-  const response = await fetch(url);
+  let response = await fetch(url);
   let data = await response.json();
   if (response) {
     document.getElementById('loader').style.display = 'none';
@@ -18,21 +18,36 @@ async function getData(url) {
   }
 
   getData(url);
-
-function showData(data) {
+  function showData(data) {
   let menu = document.getElementById("menu");
-  for (let item in data.items) {
-    menu.setAttribute("id", "order-summary");
-    let menuTitle = document.createElement("h3");
-    menuTitle.innerHTML = item;
-    let menuDescription = document.createElement("p");
-    menuDescription.innerHTML = item['description'];
-    let menuQuantity = document.createElement("p");
-    menuQuantity.setAttribute("id", "order-form button");
-    menuQuantity.innerHTML = "Quantity";
-    menu.appendChild(menuTitle);
-    menu.appendChild(menuDescription);
-    menu.appendChild(menuQuantity);
+  for (const key in data.items) {
+      const itemDiv = document.createElement('div')
+      itemDiv.setAttribute('class', 'card');
+      const item = data.items[key];
+      const price_num = item.price.toLocaleString('en-US', {
+        style: 'currency',
+        currency: 'USD',
+      });
+      let menuTitle = document.createElement("h3");
+      menuTitle.innerHTML = `${item.name} (${price_num})`;
+      let menuDescription = document.createElement("p");
+      menuDescription.innerHTML = item.description;
+      let quantityDiv = document.createElement("div");
+      let menuQuantity = document.createElement("p");
+      menuQuantity.innerHTML = "Quantity:";
+      let inputQuantity = document.createElement("INPUT");
+      inputQuantity.setAttribute("type", "number");
+      inputQuantity.setAttribute('placeholder','0');
+      inputQuantity.setAttribute('min','0');
+      inputQuantity.setAttribute('max','5');
+      inputQuantity.style.display = "inline-block";
+      menuQuantity.style.display = "inline-block";
+      itemDiv.appendChild(menuTitle);
+      itemDiv.appendChild(menuDescription);
+      quantityDiv.appendChild(menuQuantity);
+      quantityDiv.appendChild(inputQuantity);
+      itemDiv.appendChild(quantityDiv);
+      menu.appendChild(itemDiv);
   }
   
 }
