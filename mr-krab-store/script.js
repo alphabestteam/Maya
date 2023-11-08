@@ -7,7 +7,7 @@ List of endpoints:
   POST - http://localhost:8000/orders -> An endpoint to handle an order. The order is in the http body as so: { 'items': items }
 
 */
-url = "http://localhost:8000/menu"
+url = "http://localhost:8000/menu";
 async function getData(url) {
   const response = await fetch(url);
   let data = await response.json();
@@ -28,11 +28,11 @@ function showData(data) {
     let menuDescription = document.createElement("p");
     menuDescription.innerHTML = item['description'];
     let menuQuantity = document.createElement("p");
-    menuQuantity.setAttribute("id", "order-form button")
+    menuQuantity.setAttribute("id", "order-form button");
     menuQuantity.innerHTML = "Quantity";
-    menu.appendChild(menuTitle)
-    menu.appendChild(menuDescription)
-    menu.appendChild(menuQuantity)
+    menu.appendChild(menuTitle);
+    menu.appendChild(menuDescription);
+    menu.appendChild(menuQuantity);
   }
   
 }
