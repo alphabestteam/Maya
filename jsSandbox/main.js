@@ -25,19 +25,27 @@ function getRandomColor(){
     return colors[(Math.floor(Math.random() * colors.length))];
 }
 const randomWords = document.getElementById("random-words");
-function changeColor(loremArr){
+function changeColor(){
     loremArr.forEach((word) => {
         const span = document.createElement("span");
         const style = "background-color: " + getRandomColor();
         span.setAttribute("style", style);
         span.textContent = word;
         span.className = "random-word";
-        // if (randomWords.parentElement.hasAttribute(span))
-            randomWords.appendChild(span);
+        randomWords.appendChild(span);
     })
 }
-changeColor(loremArr);
+changeColor();
 const btnLorem = document.createElement("button");
 btnLorem.textContent = "click to change color";
 document.body.appendChild(btnLorem);
-btnLorem.addEventListener("click", function() {changeColor(loremArr);});
+
+randomColors = () => {return Math.floor(Math.random() * 256)}; 
+randomWordClass = document.getElementsByClassName("random-word");
+
+btnLorem.addEventListener("click", function() {
+    for (let element of randomWordClass){
+        let style = `background-color: rgb(${randomColors()},${randomColors()},${randomColors()})`;
+        element.setAttribute("style", style);
+    }
+});
