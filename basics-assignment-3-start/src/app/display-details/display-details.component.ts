@@ -10,29 +10,16 @@ import { count } from 'rxjs';
 export class DisplayDetailsComponent {
   details: boolean = true;
   counter: number = 0;
-
+  counterArray: number[] = [];
   displayDetails() {
-    const counterElement = document.createElement('p');
-    const displayArea = document.getElementById('clickCounter');
-    const detailsElement = document.getElementById('details');
-    if (this.details){
-      detailsElement.style.visibility = 'hidden';
-      this.details = false;
-    }
-    else{
-      this.details = true;
-      detailsElement.style.visibility = 'visible';
-    }
     this.counter++;
-
-    counterElement.textContent = `${this.counter}`;
-    counterElement.style.margin = '0';
-
-    if (this.counter >= 5){
-      counterElement.style.backgroundColor = "blue";
-    }
-    if (displayArea) {
-      displayArea.appendChild(counterElement);
-    }
+    this.counterArray.push(this.counter);
   };
+  getVisibility() {
+    this.details = !this.details
+    return this.details ? 'visible' : 'hidden';
+  }
+  isCounterBig() {
+    return this.counter >= 5;
+  }
 }
