@@ -14,10 +14,11 @@ export class DisplayDetailsComponent {
   displayDetails() {
     this.counter++;
     this.counterArray.push(this.counter);
+    this.details = !this.details;
   };
   getVisibility() {
-    this.details = !this.details
     return this.details ? 'visible' : 'hidden';
+    
   }
   isCounterBig() {
     return this.counter >= 5;

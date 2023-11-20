@@ -1,5 +1,5 @@
 <button (click)="displayDetails()">Display Details</button>
-<p [ngStyle]="'visibility: getVisibility()'" id="details">Helllo World</p>
+<p [ngStyle]="{'visibility': getVisibility()}" id="details">Helllo World</p>
 <div>
     <p *ngFor="let counter of counterArray" [ngClass]="{ 'blueClass': counter >= 5 }">{{ counter }}</p>
   </div>
