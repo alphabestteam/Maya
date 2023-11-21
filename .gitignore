@@ -3,3 +3,6 @@ __pycache__/
 .DS_Store
 .env
 *.log
+node_modules
+.angular
+package-lock.json
