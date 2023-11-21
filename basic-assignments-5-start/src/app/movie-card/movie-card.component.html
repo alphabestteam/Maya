@@ -1,0 +1,19 @@
+<router-outlet></router-outlet>
+<div class="container mt-5">
+  <div class="card">
+      <div class="card-header bg-dark text-light">
+          <h3 class="mb-0">{{ starWar.title }}</h3>
+      </div>
+      <div class="card-body">
+          <h5 class="card-title">{{ starWar.episode_id }}</h5>
+          <p class="card-text">
+              <strong>Director:</strong>{{ starWar.director }}<br>
+              <strong>Producer:</strong>{{ starWar.producer }}<br>
+              <strong>Release Date:</strong> {{ starWar.release_date }}</p>
+          <p class="card-text">
+              <strong>Opening Crawl:</strong><br>
+              {{ starWar.opening_crawl}}
+          </p>
+      </div>
+  </div>
+</div>
