@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrl: './success-alert.component.css'
 })
 export class SuccessAlertComponent {
-
+  
 }
