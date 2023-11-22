@@ -1,16 +1,17 @@
-<button (click)="successBtn()">
+<button mat-button (click)="successBtn()">
   click for success alert!
 </button>
 <br>
-<button (click)="warningBtn()">
+<button mat-button (click)="warningBtn()">
   click for warning alert!
 </button>
-<app-success-alert *ngIf="printAlert"></app-success-alert>
-<app-warning-alert *ngIf="!printAlert"></app-warning-alert>
+<div [ngSwitch]="printAlert">
+  <app-success-alert *ngSwitchCase="true"></app-success-alert>
+  <app-warning-alert *ngSwitchCase="false"></app-warning-alert>
+</div>
 
-
-<select [(ngModel)]="selectedOption">
-  <option value= 1>1</option>
+<select mat-select [(ngModel)]="selectedOption">
+  <option value=1>1</option>
   <option value=2>2</option>
   <option value=3>3</option>
   <option value=4>4</option>
@@ -20,6 +21,8 @@
 </select>
 
 <div *ngFor="let num of numOfTimes()">
-  <app-success-alert *ngIf="printAlert"></app-success-alert>
-  <app-warning-alert *ngIf="!printAlert"></app-warning-alert>
+  <div [ngSwitch]="printAlert">
+    <app-success-alert *ngSwitchCase="true"></app-success-alert>
+    <app-warning-alert *ngSwitchCase="false"></app-warning-alert>
+  </div>
 </div>
