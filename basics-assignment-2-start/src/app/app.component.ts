@@ -6,11 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  userInput:string = ``;
-  isInputEmpty(){
+  userInput: string = ``;
+  isInputEmpty(): boolean {
     return this.userInput == ``;
   };
-  resetUser(){
+  resetUser(): void {
     this.userInput = ``;
   };
 }
