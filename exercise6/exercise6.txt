@@ -1,0 +1,7 @@
+1. layers mechanism helps speeding the developing process by making the creation of image be more efficient and reuseable.
+layers is in the image configuration, and having it means that we can share layers between images which is more efficient,
+and saves time of creating an image from the start.
+2. The second option, because if the first run echo won't work, then it won't affect the second and third run, when in the first
+option it will. also using run once reduces the number of layers which can be good for the image size but bad for maintenance and 
+debugging.
+3. using the command docker history mysql:latest
