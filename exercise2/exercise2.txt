@@ -1,0 +1,3 @@
+docker load -i dep/hello-world.tar
+docker run --name hello-world_container hello-world
+docker start hello-world_container
