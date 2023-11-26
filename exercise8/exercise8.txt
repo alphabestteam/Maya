@@ -1,0 +1,7 @@
+docker run -p --name mytomcat 8080:8080 tomcat:latest
+docker exec -it mytomcat /bin/bash
+mv webapps webapps2
+mv webapps.dist/ webapps
+exit
+docker build -t newtomcat:1 .
+docker run -p 8080:8080 --name newtomcat newtomcat:1  
