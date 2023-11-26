@@ -1,0 +1,18 @@
+-----------DOCKER HELLO WORLD!-------------
+1. Docker is a technology that is used by developers in order to create, run, and manage 
+applications in containers. Docker helps making simpler the process of running applications, it helps
+the developers build software in ab better more efficient way.
+2. Docker image is the structure for the container, it tells docker how the container needs to look like.
+It has in it the information of how the container will run. To create a docker image first you
+need to create a Dockerfile, which you write all the commands (instructions) that will create the container when you run it.
+Then you need to build the docker image using docker build, it reads the instruction from the Dockerfile and
+creates a docker image. Then you run the command docker run <app-name> which will run the docker image
+and will create the docker container with the instructions of the image.
+3. The docker container is created with the instructions of the docker image when you run the command docker run.
+ It is a machine that runs on the operating system and it acts like a server and we can communicate it as any other server.
+4. The difference is that docker image is the instructions and container is the actual product that is created out of those
+instructions.
+5. environment variable is a flag when configuring the container, this flag allows you to give the application dynamic values
+at the runtime. 
+6. volume is the communication between the folder on the local machine to the folder in the container. so if for example
+you want to get something from local machine to the container you can do that easily with volumes. 
