@@ -1,0 +1,7 @@
+docker build -t app1:1 .
+docker run --name docker_is_the_best -p 5001:5001 app1:1
+docker ps -a 
+docker stop docker_is_the_best
+docker rm docker_is_the_best
+docker run --name docker_is_the_best -v /Users/mayameltzer/Desktop/alphaomega\training/Maya/exercise7:/app/logs/ -p 5001:5001 app1:1
+
