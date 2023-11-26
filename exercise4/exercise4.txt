@@ -1,0 +1,8 @@
+docker run -e MYSQL_ALLOW_EMPTY_PASSWORD=true -e MYSQL_DATABASE=maya_meltzer --name mysql_container -d -v /Users/mayameltzer/Desktop/alphaomega\training/Maya/exercise4:/var/lib/mysql -p 3306:3306 mysql:latest
+
+docker exec -it mysql_container bash
+cd /var/lib/mysql/maya_meltzer
+ 
+docker rm mysql_container 
+
+Using volume in the run command saved the hod table so I didn't need to create a new one.
