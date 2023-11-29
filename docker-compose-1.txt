@@ -1,0 +1,33 @@
+1. version: The version of the compose file.
+services: In this field all the containers that are being used in this compose are being written. 
+mongo /mongo-express: name of the services and in these fields the containers' info are written.
+image: image name
+container_name: container name
+environment: This field is for environment variables. In this field you set the environment variables.
+MONGO_INITDB_ROOT_USERNAME: it is used for mongo db for initializing a root user.
+MONGO_INITDB_ROOT_PASSWORD: it is used with mongo db for setting password for root user.
+ports: the port that is being used with the container the first part of the port is on the host machine, and the second port is on
+the container. 
+volumes: a field that defines the volumes for the services in the application.
+type: defines the type of volume that is being used.
+source: the directory on the host machine. used for connecting the host machine to container.
+target: the directory on the container.
+ME_CONFIG_MONGODB_ADMINUSERNAME: environment variable for Mongo Express it is used for defining a username of the administrative user that Mongo Express
+will use to connect to the MongoDB instance.
+ME_CONFIG_MONGODB_ADMINPASSWORD:It is a environment variable for Mongo Express that defines a password for username.
+ME_CONFIG_MONGODB_SERVER: environment variable for Mongo Express that defines the address for the mongo db server that Mongo Express will connect to when running Docker container.
+ME_CONFIG_MONGODB_PORT: the port of MongoDB.
+MONGO_DATA/ MONGO_CONFIG: environment variable that we define and can use in volumes.
+
+2. The error is that even though it says docker compose is running, you can't connect to it on http://localhost:8081/. That is because we didn't add port 8081 in the mongo express service, so it doesn't know 
+on which port to connect on.
+
+3. The solution is to add ports field to Mongo Express with the ports of 8081.
+
+4. docker-compose down
+
+part b:
+
+1. An easier way and cleaner way to create environment variables is with a file called .env file which in that file you add all of the environment variables and then
+in the docker-compose.yml file you just refer to the .env file.
+3. docker-compose up
