@@ -1,0 +1,5 @@
+1. To create a logical work environment, we need to add some namespaces. 
+Namespace is a way of logically organizing a cluster in virtual clusters.
+The way to do it is or with the command kubectl create namespace <namespace-name>, or with creating a yaml file of kind Namespace.
+2. kubectl apply -f backend-deployment.yaml
+kubectl apply -f frontend-deployment.yaml
