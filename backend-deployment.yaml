@@ -4,6 +4,7 @@ metadata:
   name: backend-deployment
   labels:
     app: backend-app
+  namespace: my-first-namespace
 spec:
   replicas: 1  
   selector:
