@@ -6,7 +6,9 @@ metadata:
  labels:
    app: backend-app
 spec:
+ type: NodePort
  selector:     
    app: backend-app
  ports:
-   - port: 8000
+   - port: 32499
+     targetPort: 8000
