@@ -1,3 +1,7 @@
-1. The object that is exposing the app to the world is Ingress. it is an object that exposes HTTP and HTTPS routes from the world
-to the services in the cluster. It helps with the connection part, giving urls, load balance traffic, and more.
-2. 
+1. NodePort, is the key of putting the application in the world. It is a type of services and it opens a port for every node 
+in the cluster, and so all the traffic that is sent to port is forwarded to the service. However, we usually won't use it in production 
+because it is not secure, and instead we will use Ingress, which is an object in k8s. 
+2. kubectl apply -f frontend-deployment.yaml   // saving the changes I made in the deployments for the nodePort to work
+kubectl apply -f backend-deployment.yaml  
+kubectl expose service frontend-service --type=NodePort // we add the type NodePort to the service of the frontend
+minikube service frontend-service -n my-first-namespace // we activate the application

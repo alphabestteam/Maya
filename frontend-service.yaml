@@ -9,4 +9,6 @@ spec:
  selector:     
    app: frontend-app
  ports:
-   - port: 8000
+   - protocol: TCP
+     port: 32499
+     targetPort: 8000
