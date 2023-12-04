@@ -1,0 +1,2 @@
+1. The issue is that you write the same environment variables over different files, you can make it more efficient and reduce 
+mistakes by adding an configMap object and call it when you want to use the environment variables each time.
