@@ -1,0 +1,34 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: frontend-deployment
+  labels:
+    app: frontend-app
+  namespace: my-first-namespace
+spec:
+  replicas: 1  
+  selector:
+    matchLabels:
+      app: frontend-app
+  template:
+    metadata:
+      labels:
+        app: frontend-app
+    spec:
+      containers:
+        - name: frontend-container
+          image: ghcr.io/expruc/kubernetes-gradutaion-drill/k8s-final-drill:frontend
+          ports:
+            - containerPort: 8000
+          envFrom:
+            - configMapRef:
+                name: app-configmap
+            - secretRef:
+                name: app-secret
+          resources:
+            requests:
+              memory: "64Mi"  # Min memory, it is so that the application can start from a low starting point. 
+              cpu: "250m"     # Min CPU, it is so that the app can have a small requirement for the CPU.
+            limits:
+              memory: "128Mi" # Max memory limit,  so that the app can operate with big memory but without performing poorly.
+              cpu: "500m"  # Max CPU limit, so in an extreme communication scenarios, the pod can use up to half of the CPU unit.

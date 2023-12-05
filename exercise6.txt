@@ -1,0 +1,8 @@
+1. To get the amount of resources that the pods use, I used the command:
+kubectl top pod backend-deployment-7878cdd79f-4t4zx -n my-first-namespace
+after installing metrics-server. 
+This command gave me the ifno about the CPU and Memomry (RAM). 
+NAME                                  CPU(cores)   MEMORY(bytes)   
+backend-deployment-7878cdd79f-4t4zx   1m           1Mi          
+
+2. To start managing the memory and cpu resources in the pods, I added a resources field. SEE in deployments.
