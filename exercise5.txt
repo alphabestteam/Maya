@@ -1,0 +1,3 @@
+3. I added the number 4 to the replicas attribute. it is a way of saying that I want the pod to be created 4 times
+always. So if for some reason one of the pods is down for some reason, it will create me a new one so I will always have
+4 replicas of the pod. It is useful when for example I don't have enough space in a db and I want to create more of that db.

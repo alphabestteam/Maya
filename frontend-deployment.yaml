@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: frontend-deployment
+  labels:
+    app: frontend-app
+  namespace: my-first-namespace
+spec:
+  replicas: 4 #replicas is the way of making copies of the same pod.  
+  selector:
+    matchLabels:
+      app: frontend-app
+  template:
+    metadata:
+      labels:
+        app: frontend-app
+    spec:
+      containers:
+        - name: frontend-container
+          image: ghcr.io/expruc/kubernetes-gradutaion-drill/k8s-final-drill:frontend
+          ports:
+            - containerPort: 8000
+          envFrom:
+            - configMapRef:
+                name: app-configmap
+            - secretRef:
+                name: app-secret
