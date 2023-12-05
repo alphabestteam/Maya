@@ -1,0 +1,6 @@
+1. Readiness Probes are a way of checking is a container in a pod is ready to start being a server, get and post requests
+and such. you can config a Readiness Probes in order to create conditions that k8s will check in order to make sure the container
+is ready for requests.
+2. Readiness Probes helps to make sure a container is completely ready to be a server, so there won't be a situation 
+where requests are routed to a container that is not ready or capable of being a server, it reduces errors and improves reliability.
+3. 
