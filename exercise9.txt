@@ -1,0 +1,4 @@
+3. If we don't define a service account, the pod will use a default service account with its namespace, and will not have
+a lot of configuration.
+4. service account is necessary for creating a connection with the k8s API, and to other external services and clusters. 
+It also helps with improving security by having permissions set for the pods.
