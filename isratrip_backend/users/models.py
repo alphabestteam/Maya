@@ -13,4 +13,4 @@ class User(models.Model):
     email = models.EmailField()
     city = models.TextField()
     date_of_birth = models.DateField()
-    role = models.TextChoices(choices=ROLE_OPTIONS)
+    role = models.TextField(choices=ROLE_OPTIONS)
