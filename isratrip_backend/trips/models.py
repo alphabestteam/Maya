@@ -13,6 +13,7 @@ class Trip(models.Model):
     location = models.ForeignKey(to='locations.Location', on_delete=models.CASCADE)
     categories =  models.ManyToManyField(to='categories.Category', related_name='categories', blank=True)
     trip_title = models.CharField(max_length=100)
+    trip_description = models.TextField()
     user_id = models.ForeignKey(to="users.User", on_delete=models.CASCADE)
     age_limit = models.IntegerField()
     best_weather = models.TextField(choices=WEATHER_OPTIONS)

@@ -49,6 +49,7 @@ class RequestedTripViewSet(viewsets.ModelViewSet):
         req_trip_serializer = RequestedTripSerializer(data={"location": location_id, 
                                                             "categories": category_ids,
                                                             "trip_title": request.data.get('trip_title'),
+                                                            "trip_description": request.data.get('trip_description'),
                                                             "user_id": request.data.get('user_id'),
                                                             "age_limit": request.data.get('age_limit'),
                                                             "best_weather": request.data.get('best_weather'),
