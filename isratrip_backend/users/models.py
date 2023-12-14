@@ -10,7 +10,7 @@ class User(models.Model):
     last_name = models.TextField(max_length=100)
     username = models.CharField(max_length=100, unique=True)
     password = models.CharField(max_length=100)
-    email = models.EmailField()
     city = models.TextField()
     date_of_birth = models.DateField()
-    role = models.TextField(choices=ROLE_OPTIONS)
+    role = models.TextField(choices=ROLE_OPTIONS, default=ROLE_OPTIONS[0][0])
+
