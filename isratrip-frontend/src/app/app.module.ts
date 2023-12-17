@@ -8,22 +8,35 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatButtonModule} from '@angular/material/button';
 import { LoginFormComponent } from './login-form/login-form.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
-
+import { ReviewsFormComponent } from './reviews-form/reviews-form.component';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
+import { RatingModule, RatingConfig } from 'ngx-bootstrap/rating';
+import { FormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
     RegisterFormComponent,
     LoginFormComponent,
-    NavBarComponent
+    NavBarComponent,
+    ReviewsFormComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
-    MatButtonModule
+    MatButtonModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatDatepickerModule,
+    BsDatepickerModule.forRoot(),
+    RatingModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [RatingConfig],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

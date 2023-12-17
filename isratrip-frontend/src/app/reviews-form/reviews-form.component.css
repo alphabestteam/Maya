@@ -1,8 +1,6 @@
-.login-form {
-    /* text-align: center; */
-    margin-top: 4%;
-    padding: 60px;
-    background-color: #D1E9D2;
+.star-rating {
+    font-size: 2em;
+    color: #ffc107;
   }
   .card {
     padding: 20px;
