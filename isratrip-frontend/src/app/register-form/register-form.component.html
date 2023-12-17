@@ -51,12 +51,15 @@
                 </div>
                 <div class="form-group mb-3">
                     <label class="label">date of birth</label>
-                    <input type="text" class="input form-control" formControlName="date_of_birth"
-                        [ngClass]="{'invalid': registerForm.get('date_of_birth')?.invalid && registerForm.get('date_of_birth')?.touched}" />
-                    <div *ngIf="registerForm.get('date_of_birth')?.invalid && registerForm.get('date_of_birth')?.touched"
-                        class="error-message error">
-                        Date of birth is required!
-                    </div>
+                    <div class="input-group date" id="datepicker">
+                        <input required placeholder="dd-mm-yyyy" type="date" class="input form-control" id="birthdate"
+                            formControlName="date_of_birth"
+                            [ngClass]="{'invalid': registerForm.get('date_of_birth')?.invalid && registerForm.get('date_of_birth')?.touched}" />
+                        </div>
+                        <div *ngIf="registerForm.get('date_of_birth')?.invalid && registerForm.get('date_of_birth')?.touched"
+                            class="error-message error">
+                            Date of birth is required!
+                        </div>
                 </div>
             </div>
             <div class="buttons text-center">

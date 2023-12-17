@@ -1,5 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MatInputModule} from '@angular/material/input';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatNativeDateModule} from '@angular/material/core';
+
 @Component({
   selector: 'app-register-form',
   templateUrl: './register-form.component.html',
@@ -20,7 +25,7 @@ export class RegisterFormComponent implements OnInit {
       password: ['', [Validators.required]],
     });
   }
-
+  
   onSubmit() {
     this.formSubmitted = true;
     if (this.registerForm.invalid) {

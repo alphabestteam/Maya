@@ -12,3 +12,17 @@
   .box_background{
     background-color: #F1FDF3;
   }
+  .input-group-append {
+    cursor: pointer;
+  }
+  .example-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: auto;
+  }
+  
+  .example-full-width {
+    width: 100%;
+    margin-bottom: 15px;
+  }
