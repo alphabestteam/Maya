@@ -17,6 +17,14 @@ import { RatingModule, RatingConfig } from 'ngx-bootstrap/rating';
 import { FormsModule } from '@angular/forms';
 import { RequestTripFormComponent } from './request-trip-form/request-trip-form.component';
 import {MatSelectModule} from '@angular/material/select';
+import {RouterModule, Routes} from '@angular/router';
+
+const appRoutes: Routes = [
+  {path: 'login', component: LoginFormComponent},
+  {path: 'register', component: RegisterFormComponent},
+  {path: 'request-new-trip', component: RequestTripFormComponent},
+];
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -38,7 +46,11 @@ import {MatSelectModule} from '@angular/material/select';
     BsDatepickerModule.forRoot(),
     RatingModule,
     FormsModule,
-    MatSelectModule
+    MatSelectModule,
+    FormsModule,
+    RouterModule.forRoot(
+        appRoutes  
+        )
   ],
   providers: [RatingConfig],
   bootstrap: [AppComponent]
