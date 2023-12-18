@@ -1,0 +1,12 @@
+.star-rating {
+    font-size: 2em;
+    color: #ffc107;
+  }
+  .card {
+    padding: 20px;
+    border: 1px solid #125266;
+  }
+
+  .box_background{
+    background-color: #F1FDF3;
+  }

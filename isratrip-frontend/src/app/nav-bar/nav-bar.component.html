@@ -1,0 +1,27 @@
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-color: #e3f2fd;">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#"><img class="img-responsive logo" src="assets/isratrip-logo-menu.png"></a>
+        <button class="navbar-toggler" type="button" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarLeftAlignExample" mdbCollapse>
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a routerLink="/request-new-trip" class="nav-link active" routerLinkActive="active" ariaCurrentWhenActive="page">Add Trip</a>
+                    </li>
+                </ul>
+        </div>
+        <div class="d-flex align-items-center">
+            <button type="button" class="btn btn-link px-3 me-2">
+                <a routerLink="/login" routerLinkActive="active" ariaCurrentWhenActive="page">Login</a>
+            </button>
+            <button type="button" style="border-color: black; background-color: #40513B;" class="btn btn-primary">
+                <a routerLink="/register" class="nav-link active" routerLinkActive="active" ariaCurrentWhenActive="page">Register</a>
+            </button>
+        </div>
+    </div>
+</nav>
