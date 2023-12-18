@@ -15,13 +15,16 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
 import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
 import { RatingModule, RatingConfig } from 'ngx-bootstrap/rating';
 import { FormsModule } from '@angular/forms';
+import { RequestTripFormComponent } from './request-trip-form/request-trip-form.component';
+import {MatSelectModule} from '@angular/material/select';
 @NgModule({
   declarations: [
     AppComponent,
     RegisterFormComponent,
     LoginFormComponent,
     NavBarComponent,
-    ReviewsFormComponent
+    ReviewsFormComponent,
+    RequestTripFormComponent
   ],
   imports: [
     BrowserModule,
@@ -34,7 +37,8 @@ import { FormsModule } from '@angular/forms';
     MatDatepickerModule,
     BsDatepickerModule.forRoot(),
     RatingModule,
-    FormsModule
+    FormsModule,
+    MatSelectModule
   ],
   providers: [RatingConfig],
   bootstrap: [AppComponent]
