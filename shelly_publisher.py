@@ -6,6 +6,6 @@ connection = pika.BlockingConnection(
 channel = connection.channel()
 channel.queue_declare(queue='tasks')
 
-channel.basic_publish(exchange='', routing_key='tasks', body='this is my task')
+channel.basic_publish(exchange='task', routing_key='tasks', body='creating a website that manages tasks')
 print("Daniel send a task")
 connection.close()
