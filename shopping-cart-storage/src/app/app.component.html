@@ -1,0 +1,27 @@
+<div class="card-container">
+  <div *ngFor="let record of records 
+  ">
+    <mat-card class="example-card">
+      <mat-card-header>
+        <div mat-card-avatar class="example-header-image"></div>
+        <mat-card-title>{{ record.recordName }}</mat-card-title>
+        <mat-card-subtitle>{{ record.artistName }}</mat-card-subtitle>
+      </mat-card-header>
+      <img mat-card-image [src]="record.image" [alt]="record.recordName">
+      <mat-card-content>
+        <p>{{ record.description }}</p>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-button (click)="addToShoppingCart(record)">Add to shopping cart</button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+</div>
+<div class="card-container">
+
+  <button mat-button (click)="printCart()">get shopping cart</button>
+  <button mat-button (click)="deleteCart()">delete shopping cart</button>
+</div>
+<div *ngFor="let record of finalCart">
+  <p>{{record}}</p>
+</div>
