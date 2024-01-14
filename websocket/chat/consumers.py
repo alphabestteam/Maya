@@ -1,4 +1,5 @@
 import json
+import redis
 from asgiref.sync import async_to_sync
 from channels.generic.websocket import WebsocketConsumer
 class ChatConsumer(WebsocketConsumer):
@@ -17,7 +18,9 @@ class ChatConsumer(WebsocketConsumer):
     def receive(self, text_data):
         text_data_json = json.loads(text_data)
         message = text_data_json['message']
-
+        print(message)
+        r = redis.Redis(host='localhost', port=6379, decode_responses=True)
+        r.set(message, message)
         async_to_sync(self.channel_layer.group_send)(
             self.room_group_name,
             {
